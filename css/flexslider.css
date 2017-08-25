@@ -1,0 +1,209 @@
+
+/* ====================================================================================================================
+ * RESETS
+ * ====================================================================================================================*/
+.flex-container a:hover,
+.flex-slider a:hover {
+  outline: none;
+}
+.slides,
+.slides > li,
+.flex-control-nav,
+.flex-direction-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.flex-pauseplay span {
+  text-transform: capitalize;
+}
+/* ====================================================================================================================
+ * BASE STYLES
+ * ====================================================================================================================*/
+.flexslider {
+  margin: 0;
+  padding: 0;
+}
+.flexslider .slides > li {
+  display: none;
+  -webkit-backface-visibility: hidden;
+}
+.flexslider .slides img {
+  width: 100%;
+  display: block;
+}
+.flexslider .slides:after {
+  content: "\0020";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+html[xmlns] .flexslider .slides {
+  display: block;
+}
+* html .flexslider .slides {
+  height: 1%;
+}
+.no-js .flexslider .slides > li:first-child {
+  display: block;
+}
+/* ====================================================================================================================
+ * DEFAULT THEME
+ * ====================================================================================================================*/
+.flexslider {
+  margin: 0 auto;
+  background: #ffffff;
+  position: relative;
+  zoom: 1;
+}
+.flexslider .slides {
+  zoom: 1;
+}
+.flexslider .slides img {
+  height: auto;
+  -moz-user-select: none;
+}
+.flex-viewport {
+  max-height: 2000px;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+.loading .flex-viewport {
+  max-height: 300px;
+}
+.carousel li {
+  margin-right: 5px;
+}
+.flex-direction-nav {
+  *height: 0;
+}
+.flex-direction-nav a {
+  text-decoration: none;
+  display: block;
+  position: absolute;
+  top: 45%;
+  z-index: 30;
+  overflow: hidden;
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+  background: url(../images/slider-arrows.png) no-repeat 0px 0px;
+  opacity: 0.5;
+}
+.flex-direction-nav a:before {}
+.flex-direction-nav a.flex-next:before {}
+.flex-direction-nav .flex-prev {
+  left: 15px;
+  transform: rotate(-180deg);
+}
+.flex-direction-nav .flex-next {
+  text-align: right;
+  right: 15px;
+}
+.flexslider:hover .flex-direction-nav .flex-prev {}
+.flexslider:hover .flex-direction-nav .flex-prev:hover {opacity:1;}
+.flexslider:hover .flex-direction-nav .flex-next {}
+.flexslider:hover .flex-direction-nav .flex-next:hover {opacity:1;}
+.flex-direction-nav .flex-disabled {
+  opacity: 0!important;
+  filter: alpha(opacity=0);
+  cursor: default;
+  z-index: -1;
+}
+.flex-pauseplay a {
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+  opacity: 0.8;
+  z-index: 10;
+  overflow: hidden;
+  cursor: pointer;
+  color: #000;
+}
+.flex-pauseplay a:before {
+  font-family: "flexslider-icon";
+  font-size: 20px;
+  display: inline-block;
+  content: '\f004';
+}
+.flex-pauseplay a:hover {
+  opacity: 1;
+}
+.flex-pauseplay a.flex-play:before {
+  content: '\f003';
+}
+.flex-control-nav {
+  width: 98%;
+  position: absolute;
+  bottom: 4px;
+  text-align: right;
+  z-index: 2;
+  right: 6px;
+  max-width: 750px;
+}
+.flex-control-nav li {
+  margin: 0 1px 0 2px;
+  display: inline-block;
+  zoom: 1;
+  *
+  display: inline;
+}
+.flex-control-paging li a {
+  width: 15px;
+  height: 16px;
+  display: block;
+  cursor: pointer;
+  background-color:#b8b9bb;
+  border:1px solid #020202;
+  border-radius: 50%;
+  text-align: center;
+  color: #000;
+  font-size: 14px;
+  line-height: 17px;
+  padding: 0 0 0 1px;
+}
+.flex-control-paging li a:hover {
+  background-color: #a0a0a0;
+}
+.flex-control-paging li a.flex-active {
+  background-color: #dcdddf;
+  color:#db0000;
+}
+.flex-control-thumbs {
+  margin: 5px 0 0;
+  position: static;
+  overflow: hidden;
+}
+.flex-control-thumbs li {
+  width: 25%;
+  float: left;
+  margin: 0;
+}
+.flex-control-thumbs img {
+  width: 100%;
+  height: auto;
+  display: block;
+  opacity: .7;
+  cursor: pointer;
+  -moz-user-select: none;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+.flex-control-thumbs img:hover {
+  opacity: 1;
+}
+.flex-control-thumbs .flex-active {
+  opacity: 1;
+  cursor: default;
+}
